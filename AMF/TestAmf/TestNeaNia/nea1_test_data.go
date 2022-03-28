@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Open Networking Foundation <info@opennetworking.org>
+//
+// SPDX-License-Identifier: Apache-2.0
+
 package TestNeaNia
 
 type NEA1TestSet struct {
