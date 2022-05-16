@@ -5,7 +5,7 @@
 package TestRegistrationProcedure
 
 import (
-	"github.com/free5gc/openapi/models"
+	"github.com/omec-project/openapi/models"
 )
 
 const (
