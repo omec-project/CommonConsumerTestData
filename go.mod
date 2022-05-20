@@ -9,7 +9,7 @@ require (
 	github.com/omec-project/aper v1.0.100-dev
 	github.com/omec-project/logger_conf v1.0.100-dev
 	github.com/omec-project/logger_util v1.0.100-dev
-	github.com/omec-project/nas v1.0.106-dev
+	github.com/omec-project/nas v1.0.107-dev
 	github.com/omec-project/ngap v1.0.101-dev
 	github.com/omec-project/openapi v1.2.99
 	github.com/sirupsen/logrus v1.8.1
