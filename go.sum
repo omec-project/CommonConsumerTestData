@@ -60,8 +60,8 @@ github.com/omec-project/ngap v1.2.0 h1:BeH8xiQQUnBog0eQiipjgcV7Ua02MEnpS4O5hwVMp
 github.com/omec-project/ngap v1.2.0/go.mod h1:fbX1GqunoSS2B7GDTEccIutmgNdUIxSy5BKVnvX7SM0=
 github.com/omec-project/openapi v1.2.0 h1:7Wvi0HLvhvxMyQtqGcqtMCPC/0QCGAFP5htrXCfWxRc=
 github.com/omec-project/openapi v1.2.0/go.mod h1:hjU13MB1m9MHTko87JfsUNCdeD6/m6VkNZDD8Vq5U9M=
-github.com/omec-project/util v1.0.13-0.20240207024358-eb30f7e970e8 h1:xjfHzmCE5l0JrSPJ56YEeGH9ZP+u6z6zV0atnQn/MEI=
-github.com/omec-project/util v1.0.13-0.20240207024358-eb30f7e970e8/go.mod h1:Cn9P57qYFiEu0ZXti8imODsJIXVGqnqhP40MwbVbo3g=
+github.com/omec-project/util v1.0.13 h1:50ghFbWo7aqhqIknC6KDPWmkht0tP1v2wjpIdcWVXKg=
+github.com/omec-project/util v1.0.13/go.mod h1:Cn9P57qYFiEu0ZXti8imODsJIXVGqnqhP40MwbVbo3g=
 github.com/omec-project/util_3gpp v1.2.0 h1:u2c1QeBGMnH6Ps5HSbPloTeeGjsAAMFuyl8Nsw+HqsM=
 github.com/omec-project/util_3gpp v1.2.0/go.mod h1:53qng9MRMW1tgc2Cg0w+LaBNbskdQQqGZt/fcjPQSy4=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
