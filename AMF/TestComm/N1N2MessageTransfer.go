@@ -124,7 +124,6 @@ func init() {
 	// var data ngapType.PDUSessionResourceReleaseCommandTransfer
 	// aper.UnmarshalWithParams(*transfer, &data, "valueExt")
 	// spew.Dump(data)
-
 }
 
 func buildPDUSessionResourceReleaseCommandTransfer() (data ngapType.PDUSessionResourceReleaseCommandTransfer) {
@@ -135,6 +134,7 @@ func buildPDUSessionResourceReleaseCommandTransfer() (data ngapType.PDUSessionRe
 	misc.Value = ngapType.CauseMiscPresentHardwareFailure
 	return
 }
+
 func GetPDUSessionResourceReleaseCommandTransfer() []byte {
 	encodeData, _ := aper.MarshalWithParams(N2InfoTable[models.NgapIeType_PDU_RES_REL_CMD], "valueExt")
 	return encodeData

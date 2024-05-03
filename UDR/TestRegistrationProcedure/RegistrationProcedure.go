@@ -12,11 +12,13 @@ const (
 	FREE5GC_CASE = "free5gc"
 )
 
-var TestAmDataTable = make(map[string]models.AccessAndMobilitySubscriptionData)
-var TestSmfSelDataTable = make(map[string]models.SmfSelectionSubscriptionData)
-var TestSmSelDataTable = make(map[string][]models.SessionManagementSubscriptionData)
-var TestAmPolicyDataTable = make(map[string]models.AmPolicyData)
-var TestSmPolicyDataTable = make(map[string]models.SmPolicyData)
+var (
+	TestAmDataTable       = make(map[string]models.AccessAndMobilitySubscriptionData)
+	TestSmfSelDataTable   = make(map[string]models.SmfSelectionSubscriptionData)
+	TestSmSelDataTable    = make(map[string][]models.SessionManagementSubscriptionData)
+	TestAmPolicyDataTable = make(map[string]models.AmPolicyData)
+	TestSmPolicyDataTable = make(map[string]models.SmPolicyData)
+)
 
 func init() {
 	TestAmDataTable[FREE5GC_CASE] = models.AccessAndMobilitySubscriptionData{
@@ -115,7 +117,8 @@ func init() {
 						DefaultSscMode:  models.SscMode__1,
 						AllowedSscModes: []models.SscMode{models.SscMode__1, models.SscMode__2, models.SscMode__3},
 					},
-					PduSessionTypes: &models.PduSessionTypes{DefaultSessionType: models.PduSessionType_IPV4,
+					PduSessionTypes: &models.PduSessionTypes{
+						DefaultSessionType:  models.PduSessionType_IPV4,
 						AllowedSessionTypes: []models.PduSessionType{models.PduSessionType_IPV4},
 					},
 					SessionAmbr: &models.Ambr{
@@ -143,7 +146,8 @@ func init() {
 						DefaultSscMode:  models.SscMode__1,
 						AllowedSscModes: []models.SscMode{models.SscMode__1, models.SscMode__2, models.SscMode__3},
 					},
-					PduSessionTypes: &models.PduSessionTypes{DefaultSessionType: models.PduSessionType_IPV4,
+					PduSessionTypes: &models.PduSessionTypes{
+						DefaultSessionType:  models.PduSessionType_IPV4,
 						AllowedSessionTypes: []models.PduSessionType{models.PduSessionType_IPV4},
 					},
 					SessionAmbr: &models.Ambr{

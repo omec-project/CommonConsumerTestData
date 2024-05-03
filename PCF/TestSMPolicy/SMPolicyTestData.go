@@ -217,6 +217,7 @@ func UpdateTestData(trigger []models.PolicyControlRequestTrigger, op *models.Rul
 	}
 	return data
 }
+
 func DeldateTestData() models.SmPolicyDeleteData {
 	smDelData := models.SmPolicyDeleteData{
 		UserLocationInfo: &models.UserLocation{

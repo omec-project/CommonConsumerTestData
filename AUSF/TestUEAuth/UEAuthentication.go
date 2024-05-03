@@ -41,8 +41,10 @@ const (
 	TEST_SUPI_ANS         = "imsi-27401200012080f6"
 )
 
-var TestUe5gAuthTable = make(map[string]*ResStarConfirmData)
-var TestUeEapAuthTable = make(map[string]*ResConfirmData)
+var (
+	TestUe5gAuthTable  = make(map[string]*ResStarConfirmData)
+	TestUeEapAuthTable = make(map[string]*ResConfirmData)
+)
 
 func init() {
 	// for 5G AKA

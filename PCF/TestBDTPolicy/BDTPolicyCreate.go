@@ -5,8 +5,9 @@
 package TestBDTPolicy
 
 import (
-	"github.com/omec-project/openapi/models"
 	"time"
+
+	"github.com/omec-project/openapi/models"
 )
 
 func GetCreateTestData() models.BdtReqData {

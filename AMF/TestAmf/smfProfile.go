@@ -5,8 +5,8 @@
 package TestAmf
 
 import (
-	"github.com/omec-project/openapi/models"
 	"github.com/google/uuid"
+	"github.com/omec-project/openapi/models"
 )
 
 func BuildSmfNfProfile() (uuId string, profile models.NfProfile) {
@@ -29,7 +29,6 @@ func BuildSmfNfProfile() (uuId string, profile models.NfProfile) {
 		},
 		NfServices: &[]models.NfService{
 			{
-
 				ServiceInstanceId: "1",
 				ServiceName:       models.ServiceName_NSMF_PDUSESSION,
 				Scheme:            models.UriScheme_HTTPS,
@@ -66,5 +65,4 @@ func BuildSmfNfProfile() (uuId string, profile models.NfProfile) {
 		},
 	}
 	return
-
 }
