@@ -6,11 +6,12 @@ package TestPDUSession
 
 import (
 	"bytes"
+
+	"github.com/google/uuid"
 	"github.com/omec-project/nas"
 	"github.com/omec-project/nas/nasMessage"
 	"github.com/omec-project/nas/nasType"
 	"github.com/omec-project/openapi/models"
-	"github.com/google/uuid"
 )
 
 const (
@@ -151,10 +152,10 @@ type nasMessageULNASTransportData struct {
 	inSpareHalfOctetAndPayloadContainerType uint8
 	inPayloadContainer                      nasType.PayloadContainer
 	inPduSessionID2Value                    nasType.PduSessionID2Value
-	//inOldPDUSessionID                       nasType.OldPDUSessionID
+	// inOldPDUSessionID                       nasType.OldPDUSessionID
 	inRequestType nasType.RequestType
 	inSNSSAI      nasType.SNSSAI
-	//inAdditionalInformation                 nasType.AdditionalInformation
+	// inAdditionalInformation                 nasType.AdditionalInformation
 }
 
 var NasMessageNasMessageULNASTransportDataTable = make(map[string]nasMessageULNASTransportData)
@@ -175,7 +176,7 @@ func init() {
 			Octet: 10,
 		},
 
-		//inOldPDUSessionID
+		// inOldPDUSessionID
 
 		inRequestType: nasType.RequestType{
 			Octet: nasMessage.ULNASTransportRequestTypeType<<4 | nasMessage.ULNASTransportRequestTypeType,
@@ -185,7 +186,7 @@ func init() {
 			Len:   4,
 			Octet: [8]uint8{0x01, 0x02, 0x03, 0x01},
 		},
-		//inAdditionalInformation
+		// inAdditionalInformation
 	}
 }
 

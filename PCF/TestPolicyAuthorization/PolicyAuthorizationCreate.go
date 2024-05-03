@@ -64,7 +64,7 @@ func GetPostAppSessionsData_Normal() models.AppSessionContext {
 				},
 			},
 			NotifUri: "https://127.0.0.1:12345",
-			SuppFeat: "5", //b'0111'
+			SuppFeat: "5", // b'0111'
 			Supi:     "imsi-2089300007487",
 			UeIpv4:   "45.45.0.2",
 		},
@@ -210,7 +210,8 @@ func GetUpdateEventsSubsc400Data() models.EventsSubscReqData {
 			Duration:       0,
 			TotalVolume:    0,
 			DownlinkVolume: 0,
-			UplinkVolume:   0},
+			UplinkVolume:   0,
+		},
 	}
 	return UpdateEventsSubsc400Data
 }

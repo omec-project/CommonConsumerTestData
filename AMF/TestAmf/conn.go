@@ -18,6 +18,7 @@ type TestAddr struct {
 func (addr *TestAddr) Network() string {
 	return addr.Net
 }
+
 func (addr *TestAddr) String() string {
 	return addr.Value
 }

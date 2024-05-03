@@ -113,7 +113,6 @@ func init() {
 			Value: 0,
 		},
 	}
-
 }
 
 var ConsumerAMFUEContextTransferRequestTable = make(map[string]models.UeContextTransferRequest)
@@ -176,5 +175,4 @@ func init() {
 		ToReleaseSessionList: nil,
 		PcfReselectedInd:     false,
 	}
-
 }

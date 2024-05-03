@@ -5,8 +5,9 @@
 package TestAMPolicy
 
 import (
-	"github.com/omec-project/openapi/models"
 	"time"
+
+	"github.com/omec-project/openapi/models"
 )
 
 //Data type definition TS 29.571//
@@ -53,7 +54,7 @@ UserLoc :
 //Success Test
 func GetAMreqdata() models.PolicyAssociationRequest {
 	timeNow := time.Now()
-	//d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
+	// d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
 	amCreateReqData := models.PolicyAssociationRequest{
 		NotificationUri: "http://127.0.0.1:29518/namf-callback/v1/am-policy/imsi-2089300007487-1",
 		Supi:            "imsi-2089300007487",
@@ -91,7 +92,7 @@ func GetAMreqdata() models.PolicyAssociationRequest {
 					NrCellId: "000000001",
 				},
 				AgeOfLocationInformation: 123,
-				//UeLocationTimestamp:      "2019-04-15T09:47:35.505Z",
+				// UeLocationTimestamp:      "2019-04-15T09:47:35.505Z",
 				UeLocationTimestamp: &timeNow,
 				GlobalGnbId: &models.GlobalRanNodeId{
 					PlmnId: &models.PlmnId{
@@ -132,6 +133,7 @@ func GetAMreqdata() models.PolicyAssociationRequest {
 	}
 	return amCreateReqData
 }
+
 func GetAMUpdateReqData() models.PolicyAssociationUpdateRequest {
 	amUpdateReqData := models.PolicyAssociationUpdateRequest{
 		Triggers: []models.RequestTrigger{
@@ -168,16 +170,17 @@ func GetAMUpdateReqData() models.PolicyAssociationUpdateRequest {
 
 //-------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------
-//Fail Test (Create part)
+// -------------------------------------------------------------------------------------------------
+// Fail Test (Create part)
 func GetamCreatefailnotifyURIData() models.PolicyAssociationRequest {
-	//d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
+	// d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
 	amCreatefailnotifyURIData := GetAMreqdata()
 	amCreatefailnotifyURIData.NotificationUri = ""
 	return amCreatefailnotifyURIData
 }
+
 func GetamCreatefailsupiData() models.PolicyAssociationRequest {
-	//d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
+	// d := time.Date(2019, 7, 5, 12, 30, 0, 0, time.UTC)
 	amCreatefailnotifysupiData := GetAMreqdata()
 	amCreatefailnotifysupiData.Supi = "dadfasdfasd"
 	return amCreatefailnotifysupiData

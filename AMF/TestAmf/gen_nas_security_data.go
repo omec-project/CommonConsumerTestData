@@ -41,11 +41,10 @@ const (
 
 var TestNIA2Table = make(map[string]*NIA2TestSet)
 
-//https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/AES_CMAC.pdf
+// https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/AES_CMAC.pdf
 var TestCMACAES128Table = make(map[string]*CMACAES128)
 
 func init() {
-
 	TestNIA2Table[NIA2Test1] = &NIA2TestSet{
 		// TS 33.401 test set 1
 		CountI:    "38a6f056",
@@ -163,5 +162,4 @@ func init() {
 		PlainText: "007e005d02010280",
 		Expected:  "95c3ae0d",
 	}
-
 }

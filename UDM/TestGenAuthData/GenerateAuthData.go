@@ -31,8 +31,10 @@ const (
 	TESTSET_SERVING_NETWORK_NAME = "WLAN"
 )
 
-var TestGenAuthDataTable = make(map[string]*models.AuthenticationInfoRequest)
-var MilenageTestSet19 milenageTestSet
+var (
+	TestGenAuthDataTable = make(map[string]*models.AuthenticationInfoRequest)
+	MilenageTestSet19    milenageTestSet
+)
 
 func init() {
 	TestGenAuthDataTable[SUCCESS_CASE] = &models.AuthenticationInfoRequest{

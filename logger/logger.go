@@ -9,16 +9,17 @@ import (
 	"time"
 
 	formatter "github.com/antonfisher/nested-logrus-formatter"
-	"github.com/sirupsen/logrus"
-
 	"github.com/omec-project/logger_conf"
 	"github.com/omec-project/logger_util"
+	"github.com/sirupsen/logrus"
 )
 
-var log *logrus.Logger
-var CommTestCommLog *logrus.Entry
-var CommTestAmfLog *logrus.Entry
-var CommTestSmfLog *logrus.Entry
+var (
+	log             *logrus.Logger
+	CommTestCommLog *logrus.Entry
+	CommTestAmfLog  *logrus.Entry
+	CommTestSmfLog  *logrus.Entry
+)
 
 func init() {
 	log = logrus.New()
@@ -32,12 +33,12 @@ func init() {
 		FieldsOrder:     []string{"component", "category"},
 	}
 
-	free5gcLogHook, err := logger_util.NewFileHook(logger_conf.Free5gcLogFile, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	free5gcLogHook, err := logger_util.NewFileHook(logger_conf.Free5gcLogFile, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0o666)
 	if err == nil {
 		log.Hooks.Add(free5gcLogHook)
 	}
 
-	selfLogHook, err := logger_util.NewFileHook(logger_conf.LibLogDir+"common_consumer_test_data.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	selfLogHook, err := logger_util.NewFileHook(logger_conf.LibLogDir+"common_consumer_test_data.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, 0o666)
 	if err == nil {
 		log.Hooks.Add(selfLogHook)
 	}
@@ -52,7 +53,7 @@ func SetLogLevel(level logrus.Level) {
 	log.SetLevel(level)
 }
 
-func SetReportCaller(bool bool) {
-	CommTestCommLog.Infoln("set report call :", bool)
-	log.SetReportCaller(bool)
+func SetReportCaller(reportCaller bool) {
+	CommTestCommLog.Infoln("set report call :", reportCaller)
+	log.SetReportCaller(reportCaller)
 }
